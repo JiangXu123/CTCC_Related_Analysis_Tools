@@ -8,5 +8,6 @@ ligation junction enrichment. The use of these adaptors helps tracking of the DN
 of DNA by other methods such as sonication, which are widely used in ChIP-Seq and SPRITE.
 The third one contains the tools for HiC pairs preparation, such as fitering of MPQ scores or trimming the reads to the desired ones, or subcompartment tagging for Hi pairs. 
 The fourth one contains the tools for SPRITE Data analysis. SPRITE is a method developed by Quinodoz, S. A. et al(2018) for studying nuclear structure without proximity ligation.
-The fivth one contains simple tools for general usage.
+The fivth one contains tools for extraction peak and valley postion from a bedgraph file, such tool is useful for get the position of interest(such as valley and peak) for pileup assay in HiC analysis.
+
 
