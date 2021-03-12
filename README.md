@@ -10,4 +10,12 @@ The third one contains the tools for HiC pairs preparation, such as fitering of 
 The fourth one contains the tools for SPRITE Data analysis. SPRITE is a method developed by Quinodoz, S. A. et al(2018) for studying nuclear structure without proximity ligation.
 The fivth one contains tools for extraction peak and valley postion from a bedgraph file, such tool is useful for get the position of interest(such as valley and peak) for pileup assay in HiC analysis.
 
-
+## How to use them?
+1. make sure you installed the correct python version, currently only support python 3.7
+2. copy and paste each python code to your text editor such as nano, ctrl + x to save the code to the desired name, such as xxx.py
+3. chmod +x xxx.py
+4. make a customized folder you desired to store your own python code, such as my_own_python_code:   mkdir ~/my_own_python_code
+5. move the python code you just created to this folder:  mv ./xxx.py ~/my_own_python_code
+6. add the following line path to the .bash_profile in the home directory, you can use nano or vim text editor to open the bash_profile file
+   export PATH=/Users/jiangxu/Documents/my_own_python_code:$PATH
+   
