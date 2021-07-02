@@ -2,96 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e0748a-972d-42f8-a07f-d4c13817901c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/aggregate_breaking.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_pair_dist_freq_dif.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/calc_breaking_nc_dist_multi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_bin_sum_comp_RNA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool_comp_length_with_comp_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_division_matrix_comp_analy_rev1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_matrix_pixel_comp_analy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_pixel_comp_ compare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HiC_data_analysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NGS_data_analysis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/cal_pair_dist_freq.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cool_over_cool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_bin_sum_comp_RNA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool_comp_length.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool_comp_length_with_comp_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_division_matrix_comp_analy_rev1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_matrix_pixel_comp_analy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_pixel_comp_ compare.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CTCC_diHiC_same_comp_contact_ratio_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_analysis_tool/CTCC_diHiC_same_comp_contact_ratio_comparison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CTCC_diHiC_same_comp_contact_ratio_for_ploting.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_analysis_tool/CTCC_diHiC_same_comp_contact_ratio_for_ploting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PairMPQ_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/PairMPQ_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PairMPQ_filter_gzip.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/PairMPQ_filter_gzip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPRITE_demultiplexing.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/SPRITE_demultiplexing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SPRITE_demultiplexing_rev1.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/SPRITE_demultiplexing_rev1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprite_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/Sprite_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TF_bin_index_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/General_tools_ChIP_Seq/TF_bin_index_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trans_interactions_annotation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_new_column.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_new_line.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_pin_id.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_pin_id1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_pin_id_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_pin_id_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aggr_breaking_nc_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/aggr_breaking_nc_dist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aggregate_breaking.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bed_cut.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bed_file_slicer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/breaking_RPKM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/breaking_RPKM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breaking_RPKM_aggr.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/breaking_RPKM_aggr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breaking_ajust.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/breaking_point_m.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/breaking_subcomp_tagging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/breaking_subcomp_tagging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breaking_subcomp_tagging_bam.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/breaking_subcomp_tagging_bam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_break_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_break_bam_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_break_bam_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_break_bam_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_break_bam_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_break_bam_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_break_dist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_breaking_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_breaking_hic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_breaking_hic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_bw_peak_pos.py" beforeDir="false" afterPath="$PROJECT_DIR$/General_tools_ChIP_Seq/cal_bw_peak_pos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal_pair_dist_freq.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_pair_dist_freq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_breaking_TF_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/calc_breaking_TF_dist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_breaking_nc_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/calc_breaking_nc_dist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_breaking_nc_dist_rev1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_contact_frequency.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calc_hic_pair_tss_tts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/calc_hic_pair_tss_tts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comparion_download.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concat_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/General_tools_ChIP_Seq/concat_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/counting_frequency.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cryomilling_sensitive_same_comp_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_analysis_tool/cryomilling_sensitive_same_comp_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequencing_data_pre_processing/data_rename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_trimming.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/data_trimming.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/float_to_int.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insulation_score_data_merge.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_processing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi_threading1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/muti2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ns_centered_breaking_pos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/over1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pair_mpq_filter_zp.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/pair_mpq_filter_zp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pairs_subcomp_tagging.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/pairs_subcomp_tagging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pairs_subcomp_tagging_rev1.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/pairs_subcomp_tagging_rev1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pairs_subcomp_tagging_rev2.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/pairs_subcomp_tagging_rev2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peak_bin_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/General_tools_ChIP_Seq/peak_bin_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_name_trimming.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequencing_data_pre_processing/read_name_trimming.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reads_trim.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequencing_data_pre_processing/reads_trim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverse_complement.py" beforeDir="false" afterPath="$PROJECT_DIR$/General_tools_ChIP_Seq/reverse_complement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolling_averag_break.py" beforeDir="false" afterPath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/rolling_averag_break.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpkm_larger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sequencing_read_name_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sequencing_data_pre_processing/sequencing_read_name_change.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite_demultiplexing_rev2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/sprite_demultiplexing_rev2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite_mapping_tune.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/sprite_mapping_tune.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite_pair_simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/sprite_pair_simulator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite_pair_simulator_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/sprite_pair_simulator_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite_pair_simulator_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/sprite_pair_simulator_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprite_same_bc_reads_distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/SPRITE_data_processing_and_simulation/sprite_same_bc_reads_distance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trans_contact_filtering.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tss_tts_bed_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tss_tts_bin_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/TSS_TTS_related/tss_tts_bin_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tss_tts_bin_generator_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/TSS_TTS_related/tss_tts_bin_generator_v1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/two_d_arry_ploting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_pair_dist_freq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_bin_sum_comp_RNA.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool_comp_length.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool_comp_length_with_comp_info.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_division_matrix_comp_analy_rev1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_matrix_pixel_comp_analy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_pixel_comp_ compare.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,15 +51,15 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HiC_Pair_File_Preprocessing" />
       <recent name="$PROJECT_DIR$/Local_analysis_tool" />
       <recent name="$PROJECT_DIR$/General_tools_ChIP_Seq" />
       <recent name="$PROJECT_DIR$/TSS_TTS_related" />
       <recent name="$PROJECT_DIR$/Sequencing_data_pre_processing" />
-      <recent name="$PROJECT_DIR$/HiC_Pair_File_Preprocessing" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python.loop_comp_sorting">
@@ -294,87 +222,38 @@
       <option name="presentableId" value="Default" />
       <updated>1576648265205</updated>
     </task>
+    <task id="LOCAL-00001" summary="deleted some junk files and grouped the code">
+      <created>1615498656776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615498656776</updated>
+    </task>
+    <task id="LOCAL-00002" summary="deleted some junk files and grouped the code">
+      <created>1615498748100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615498748100</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="deleted some junk files and grouped the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted some junk files and grouped the code" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="322" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615497812821">
-      <screen x="44" y="25" width="1636" height="1025" />
+    <state x="578" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1624979138435">
+      <screen x="39" y="25" width="1641" height="1025" />
     </state>
-    <state x="322" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/44.25.1636.1025@44.25.1636.1025" timestamp="1615497812821" />
-    <state x="509" y="133" key="CommitChangelistDialog2" timestamp="1615498654384">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state x="509" y="133" key="CommitChangelistDialog2/44.25.1636.1025@44.25.1636.1025" timestamp="1615498654384" />
-    <state width="794" height="334" key="GridCell.Tab.0.bottom" timestamp="1615497820289">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="1612" height="185" key="GridCell.Tab.0.bottom/1680.-600.3840.2135/42.25.1638.1025@42.25.1638.1025" timestamp="1607371746688" />
-    <state width="1616" height="195" key="GridCell.Tab.0.bottom/42.25.1638.1025@42.25.1638.1025" timestamp="1611344750496" />
-    <state width="794" height="334" key="GridCell.Tab.0.bottom/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820289" />
-    <state width="794" height="334" key="GridCell.Tab.0.center" timestamp="1615497820288">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="1612" height="185" key="GridCell.Tab.0.center/1680.-600.3840.2135/42.25.1638.1025@42.25.1638.1025" timestamp="1607371746687" />
-    <state width="1616" height="195" key="GridCell.Tab.0.center/42.25.1638.1025@42.25.1638.1025" timestamp="1611344750496" />
-    <state width="794" height="334" key="GridCell.Tab.0.center/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820288" />
-    <state width="794" height="334" key="GridCell.Tab.0.left" timestamp="1615497820287">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="1612" height="185" key="GridCell.Tab.0.left/1680.-600.3840.2135/42.25.1638.1025@42.25.1638.1025" timestamp="1607371746686" />
-    <state width="1616" height="195" key="GridCell.Tab.0.left/42.25.1638.1025@42.25.1638.1025" timestamp="1611344750495" />
-    <state width="794" height="334" key="GridCell.Tab.0.left/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820287" />
-    <state width="794" height="334" key="GridCell.Tab.0.right" timestamp="1615497820289">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="1612" height="185" key="GridCell.Tab.0.right/1680.-600.3840.2135/42.25.1638.1025@42.25.1638.1025" timestamp="1607371746687" />
-    <state width="1616" height="195" key="GridCell.Tab.0.right/42.25.1638.1025@42.25.1638.1025" timestamp="1611344750496" />
-    <state width="794" height="334" key="GridCell.Tab.0.right/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820289" />
-    <state width="794" height="334" key="GridCell.Tab.1.bottom" timestamp="1615497820290">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="794" height="334" key="GridCell.Tab.1.bottom/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820290" />
-    <state width="794" height="334" key="GridCell.Tab.1.center" timestamp="1615497820290">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="794" height="334" key="GridCell.Tab.1.center/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820290" />
-    <state width="794" height="334" key="GridCell.Tab.1.left" timestamp="1615497820290">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="794" height="334" key="GridCell.Tab.1.left/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820290" />
-    <state width="794" height="334" key="GridCell.Tab.1.right" timestamp="1615497820290">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state width="794" height="334" key="GridCell.Tab.1.right/44.25.1636.1025@44.25.1636.1025" timestamp="1615497820290" />
-    <state x="491" y="322" key="SettingsEditor" timestamp="1615492772094">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state x="192" y="147" key="SettingsEditor/0.25.1638.1025@0.25.1638.1025" timestamp="1609219329955" />
-    <state x="2205" y="350" key="SettingsEditor/1680.25.1920.1055/3600.25.1920.1055/42.25.1638.1025@1680.25.1920.1055" timestamp="1612311078385" />
-    <state x="491" y="322" key="SettingsEditor/44.25.1636.1025@44.25.1636.1025" timestamp="1615492772094" />
-    <state x="457" y="272" key="Vcs.Push.Dialog.v2" timestamp="1615498384714">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state x="457" y="272" key="Vcs.Push.Dialog.v2/44.25.1636.1025@44.25.1636.1025" timestamp="1615498384714" />
-    <state x="486" y="312" key="com.intellij.ide.util.TipDialog" timestamp="1615497784095">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state x="443" y="312" key="com.intellij.ide.util.TipDialog/0.25.1638.1025@0.25.1638.1025" timestamp="1609051038318" />
-    <state x="485" y="312" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/3600.25.1920.1055/42.25.1638.1025@42.25.1638.1025" timestamp="1612930455995" />
-    <state x="2199" y="320" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/3600.25.1920.1055/44.25.1636.1025@1680.25.1920.1055" timestamp="1614017925871" />
-    <state x="486" y="312" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/3600.25.1920.1055/44.25.1636.1025@44.25.1636.1025" timestamp="1615153865527" />
-    <state x="486" y="312" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/44.25.1636.1025@44.25.1636.1025" timestamp="1615481819991" />
-    <state x="485" y="312" key="com.intellij.ide.util.TipDialog/42.25.1638.1025@42.25.1638.1025" timestamp="1611717619980" />
-    <state x="486" y="312" key="com.intellij.ide.util.TipDialog/44.25.1636.1025@44.25.1636.1025" timestamp="1615497784095" />
-    <state x="600" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615498245954">
-      <screen x="44" y="25" width="1636" height="1025" />
-    </state>
-    <state x="600" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.1920.1055/3600.25.1920.1055/44.25.1636.1025@44.25.1636.1025" timestamp="1614038918764" />
-    <state x="600" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/44.25.1636.1025@44.25.1636.1025" timestamp="1615498245954" />
-    <state x="1931" y="25" width="983" height="1062" key="search.everywhere.popup" timestamp="1613023323848">
+    <state x="578" y="366" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1624979138435" />
+    <state x="2333" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625185360882">
       <screen x="1680" y="25" width="1920" height="1055" />
     </state>
-    <state x="1931" y="25" width="983" height="1062" key="search.everywhere.popup/1680.25.1920.1055/3600.25.1920.1055/42.25.1638.1025@1680.25.1920.1055" timestamp="1613023323848" />
-    <state x="256" y="25" width="838" height="1031" key="search.everywhere.popup/1680.25.1920.1055/3600.25.1920.1055/42.25.1638.1025@42.25.1638.1025" timestamp="1612935399424" />
-    <state x="256" y="25" width="838" height="1031" key="search.everywhere.popup/42.25.1638.1025@42.25.1638.1025" timestamp="1611792885203" />
+    <state x="2333" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.1920.1055/39.25.1641.1025@1680.25.1920.1055" timestamp="1625185360882" />
+    <state x="597" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1625071438616" />
+    <state x="597" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.2560.1415/4240.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1620150690776" />
   </component>
 </project>
