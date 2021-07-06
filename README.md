@@ -1,4 +1,4 @@
-# CTCC_Related_Analysis_Tools
+# CTCC Related Analysis Tools
 In this repository, I share the tools I wrote for preparation of data for CTCC and HiC data analysis and visualization.
 There are total of 5 category of tools. 
 1. The first one contains the tool for sequencing data preparation, like trimming of reads in fastq file by the desired lenth, this will also trimmed the individual nucleotide read quality scores accordingly.
