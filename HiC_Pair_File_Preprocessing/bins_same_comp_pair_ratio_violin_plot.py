@@ -7,7 +7,12 @@ import csv
 import pandas as pd
 import seaborn as sns
 
-
+'''
+The tabix indexed input pair file should be in the format of 
+['chr_1_name','chr_1_pos','chr_1_strand','chr_2_name', 'chr_2_pos','chr_2_strand','distance', 'interaction_type', 'experiment']
+'interaction_type' is in the form of 'A1-A2', 'A2-A3', 'B3-B2'...
+only 'A1-A1', 'A2-A2', 'B1-B1', 'B2-B2', 'B3-B3'are regarded as 'signal', others are regarded as 'noise'
+'''
 def run(args):
     indexed_comp_file = args.comp
     bin_file = args.bin_f
