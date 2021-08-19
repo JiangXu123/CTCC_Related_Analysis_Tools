@@ -13,6 +13,8 @@ The tabix indexed input pair file should be in the format of
 'interaction_type' is in the form of 'A1-A2', 'A2-A3', 'B3-B2'...
 only 'A1-A1', 'A2-A2', 'B1-B1', 'B2-B2', 'B3-B3'are regarded as 'signal', others are regarded as 'noise'
 '''
+
+
 def run(args):
     indexed_comp_file = args.comp
     bin_file = args.bin_f
