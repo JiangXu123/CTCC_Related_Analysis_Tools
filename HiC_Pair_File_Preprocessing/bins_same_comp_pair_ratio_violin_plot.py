@@ -9,7 +9,7 @@ import seaborn as sns
 
 '''
 The tabix indexed input pair file should be in the format of 
-['chr_1_name','chr_1_pos','chr_1_strand','chr_2_name', 'chr_2_pos','chr_2_strand','distance', 'interaction_type', 'experiment']
+['chr_1_name', 'chr_1_start', 'chr_1_pos','chr_1_strand','chr_2_name', 'chr_2_start', 'chr_2_pos','chr_2_strand','distance', 'interaction_type', 'experiment']
 'interaction_type' is in the form of 'A1-A2', 'A2-A3', 'B3-B2'...
 only 'A1-A1', 'A2-A2', 'B1-B1', 'B2-B2', 'B3-B3'are regarded as 'signal', others are regarded as 'noise'
 '''
@@ -20,6 +20,7 @@ def run(args):
     bin_file = args.bin_f
     indexed_comp_pair_file_1 = args.pair_1
     indexed_comp_pair_file_2 = args.pair_2
+    cis_distance_threshold = args.dist_thr
     experiment_1_name = args.exp_1
     experiment_2_name = args.exp_2
     bins_same_comp_pair_ratio_file = args.output
@@ -62,7 +63,7 @@ def run(args):
                             if interaction_type == signal_type:  # if it's a trans signal
                                 pair_1_bin_trans_signal_comp_type_dic[interaction_type] += 1
                             pair_1_bin_trans_total_count += 1
-                        if result_1[0] == result_1[4]:  # if it's a cis contact
+                        if (result_1[0] == result_1[4]) & (int(result_1[8]) > cis_distance_threshold):  # if it's a qualified cis contact
                             if interaction_type == signal_type:  # if it's a cis signal
                                 pair_1_bin_cis_signal_comp_type_dic[interaction_type] += 1
                             pair_1_bin_cis_total_count += 1
@@ -72,7 +73,7 @@ def run(args):
                             if interaction_type == signal_type:  # if it's a trans signal
                                 pair_2_bin_trans_signal_comp_type_dic[interaction_type] += 1
                             pair_2_bin_trans_total_count += 1
-                        if result_2[0] == result_2[4]:  # if it's a cis contact
+                        if (result_2[0] == result_2[4]) & (int(result_2[8]) > cis_distance_threshold):  # if it's a qualified cis contact
                             if interaction_type == signal_type:  # if it's a cis signal
                                 pair_2_bin_cis_signal_comp_type_dic[interaction_type] += 1
                             pair_2_bin_cis_total_count += 1
@@ -126,6 +127,7 @@ def main():
     parser.add_argument("-b", help="bin file without Y and M chromosomes", dest="bin_f", type=str, required=True)
     parser.add_argument("-p1", help="tabix indexed compartment tagged pair file 1", dest="pair_1", type=str, required=True)
     parser.add_argument("-p2", help="tabix indexed compartment tagged pair file 2", dest="pair_2", type=str, required=True)
+    parser.add_argument("-d", help="cis distance threshold to filter out unqualified cis pairs", dest="dist_thr", type=int, required=True)
     parser.add_argument("-e1", help="experiment name for pair 1 file", dest="exp_1", type=str, required=True)
     parser.add_argument("-e2", help="experiment name for pair 2 file", dest="exp_2", type=str, required=True)
     parser.add_argument("-o", help="TF name reference file", dest="output", type=str, required=True)
