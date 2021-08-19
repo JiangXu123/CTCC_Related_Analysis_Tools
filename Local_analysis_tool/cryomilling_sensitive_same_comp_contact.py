@@ -42,7 +42,7 @@ with open(comp_tagged_pair_file, 'r') as pairs_file:
                     r2_comp = line[7]
                     if (line[0] == line[4]) & (bin_comp == r2_comp): # if it is a both cis interaction and a same compartment interaction
                         cis_signal_count += 1
-                    if (line [0] != line[4]) & (bin_comp == r2_comp): # if it is a both trans interaction and a same compartment interaction
+                    if (line[0] != line[4]) & (bin_comp == r2_comp): # if it is a both trans interaction and a same compartment interaction
                         chr_info_dic[line[4]] += 1 # then the same_comp_chr_count will plus 1 to take record of the chromosome
                         trans_signal_count += 1
                     if (line[0] == line[4]) & (bin_comp != r2_comp): # if it is cis and non_same_compartment contact(cis noise)

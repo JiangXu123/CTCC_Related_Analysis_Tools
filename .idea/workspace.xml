@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e0748a-972d-42f8-a07f-d4c13817901c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/cal_pair_dist_freq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cool_over_cool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_bin_sum_comp_RNA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool_comp_length.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool_comp_length_with_comp_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_division_matrix_comp_analy_rev1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_matrix_pixel_comp_analy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_pixel_comp_ compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/bins_same_comp_pair_ratio_violin_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_comp_length.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_compare_div_matrices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Breaking_position_calculation_and_aggregation/cal_pair_dist_freq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_bin_sum_comp_RNA.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool_comp_length.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_div_and_compare_with_3rd_cool_comp_length_with_comp_info.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_division_matrix_comp_analy_rev1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_matrix_pixel_comp_analy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_matrix_parsing_using_cooler/cooler_pixel_comp_ compare.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool_comp_length.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_div_and_compare_with_3rd_cool_comp_length.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Local_analysis_tool/cryomilling_sensitive_same_comp_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/Local_analysis_tool/cryomilling_sensitive_same_comp_contact.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +35,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HiC_matrix_manipulation" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HiC_Pair_File_Preprocessing" />
       <recent name="$PROJECT_DIR$/Local_analysis_tool" />
       <recent name="$PROJECT_DIR$/General_tools_ChIP_Seq" />
       <recent name="$PROJECT_DIR$/TSS_TTS_related" />
       <recent name="$PROJECT_DIR$/Sequencing_data_pre_processing" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HiC_matrix_manipulation" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Python.loop_comp_sorting">
@@ -236,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615498748100</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleted some junk files and grouped the code">
+      <created>1625185370097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625185370098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,15 +241,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="deleted some junk files and grouped the code" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="578" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1624979138435">
-      <screen x="39" y="25" width="1641" height="1025" />
-    </state>
-    <state x="578" y="366" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1624979138435" />
-    <state x="2333" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625185360882">
+    <state x="2271" y="230" key="CommitChangelistDialog2" timestamp="1625185369820">
       <screen x="1680" y="25" width="1920" height="1055" />
     </state>
+    <state x="2271" y="230" key="CommitChangelistDialog2/1680.25.1920.1055/39.25.1641.1025@1680.25.1920.1055" timestamp="1625185369820" />
+    <state x="576" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1629325831305">
+      <screen x="36" y="25" width="1644" height="1025" />
+    </state>
+    <state x="576" y="366" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1629325831305" />
+    <state x="578" y="366" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1625353863784" />
+    <state x="576" y="366" key="com.intellij.ide.util.TipDialog/36.25.1644.1025@36.25.1644.1025" timestamp="1627770631207" />
+    <state x="2333" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629336384670">
+      <screen x="1680" y="25" width="1920" height="1055" />
+    </state>
+    <state x="2333" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.1920.1055/36.25.1644.1025@1680.25.1920.1055" timestamp="1629336384670" />
     <state x="2333" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.1920.1055/39.25.1641.1025@1680.25.1920.1055" timestamp="1625185360882" />
     <state x="597" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1625071438616" />
-    <state x="597" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1680.25.2560.1415/4240.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1620150690776" />
   </component>
 </project>
