@@ -63,20 +63,22 @@ def run(args):
                             if interaction_type == signal_type:  # if it's a trans signal
                                 pair_1_bin_trans_signal_comp_type_dic[interaction_type] += 1
                             pair_1_bin_trans_total_count += 1
-                        if (result_1[0] == result_1[4]) & (int(result_1[8]) > cis_distance_threshold):  # if it's a qualified cis contact
-                            if interaction_type == signal_type:  # if it's a cis signal
-                                pair_1_bin_cis_signal_comp_type_dic[interaction_type] += 1
-                            pair_1_bin_cis_total_count += 1
+                        if result_1[0] == result_1[4]:
+                            if int(float(result_1[8])) > cis_distance_threshold:  # if it's a qualified cis contact
+                                if interaction_type == signal_type:  # if it's a cis signal
+                                    pair_1_bin_cis_signal_comp_type_dic[interaction_type] += 1
+                                pair_1_bin_cis_total_count += 1
                     for result_2 in pair_2_query_results:
                         interaction_type = result_2[9]
                         if result_2[0] != result_2[4]:  # if it's a trans contact
                             if interaction_type == signal_type:  # if it's a trans signal
                                 pair_2_bin_trans_signal_comp_type_dic[interaction_type] += 1
                             pair_2_bin_trans_total_count += 1
-                        if (result_2[0] == result_2[4]) & (int(result_2[8]) > cis_distance_threshold):  # if it's a qualified cis contact
-                            if interaction_type == signal_type:  # if it's a cis signal
-                                pair_2_bin_cis_signal_comp_type_dic[interaction_type] += 1
-                            pair_2_bin_cis_total_count += 1
+                        if result_2[0] == result_2[4]:
+                            if int(float(result_2[8])) > cis_distance_threshold:  # if it's a qualified cis contact
+                                if interaction_type == signal_type:  # if it's a cis signal
+                                    pair_2_bin_cis_signal_comp_type_dic[interaction_type] += 1
+                                pair_2_bin_cis_total_count += 1
                     if pair_1_bin_trans_total_count != 0:
                         csv_writer.writerow([bin_number, 'trans', signal_type, pair_1_bin_trans_signal_comp_type_dic[signal_type], pair_1_bin_trans_signal_comp_type_dic[signal_type] / pair_1_bin_trans_total_count, experiment_1_name])
                     if pair_1_bin_cis_total_count != 0:
