@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2e0748a-972d-42f8-a07f-d4c13817901c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/bins_same_comp_pair_ratio_violin_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_Pair_File_Preprocessing/bins_same_comp_pair_ratio_violin_plot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629347073471</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="deleted some junk files and grouped the code">
+      <created>1629347750187</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629347750187</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -265,11 +271,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="deleted some junk files and grouped the code" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="542" y="224" key="CommitChangelistDialog2" timestamp="1629347073253">
+    <state x="542" y="224" key="CommitChangelistDialog2" timestamp="1629347750019">
       <screen x="36" y="25" width="1644" height="1025" />
     </state>
     <state x="2271" y="230" key="CommitChangelistDialog2/1680.25.1920.1055/36.25.1644.1025@1680.25.1920.1055" timestamp="1629337367098" />
-    <state x="542" y="224" key="CommitChangelistDialog2/1680.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1629347073253" />
+    <state x="542" y="224" key="CommitChangelistDialog2/1680.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1629347750019" />
     <state x="2271" y="230" key="CommitChangelistDialog2/1680.25.1920.1055/39.25.1641.1025@1680.25.1920.1055" timestamp="1625185369820" />
     <state x="576" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1629325831305">
       <screen x="36" y="25" width="1644" height="1025" />
