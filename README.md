@@ -18,5 +18,4 @@ There are total of 5 category of tools.
 ## My personal recommendation:
 1. data_trimming.py This python code will randomly trim the pairs file to the size you desired. Since HiC-Pro generated pairs file are sorted, it is thus not a good idea to just trim the data a few top lines to the desired size. To make the work done quickly, it is advisable to pool the pairs to a size slightly larger than the desired one using the HiC-Pro -i input_folder -o output_folder -c hic.config -s merge_persample
 2. PairMPQ_filter.py This python code will filter the pairs file with mapping quality exceding certain threshold. It is quite useful if you don't want to rerun the HiC-Pro pipeline again to set it to the desired threshold. With this you can always set the mapping quality score to zero before running HiC-Pro and filter the pairs with PairMPQ_filter.py later to the desired MPQ threshold.
-
-To be continued...
+3. bins_same_comp_pair_ratio_violin_plot.py  calculate bin's same compartment pair's ratio to bin's total pair for a particular bin for all the bins, and then plot the violin graph for the distribution of this metric of all bins. 
