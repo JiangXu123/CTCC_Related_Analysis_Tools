@@ -6,7 +6,7 @@ import time
 import pandas as pd
 
 '''
-This code is used to compute and plot cis pair distance-pair-frequency curve
+This code is used to compute and plot cis pair distance-pair-frequency for plotting
 '''
 
 
