@@ -50,7 +50,8 @@ def run(args):
     Trans_TF_looping_folder_name = TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0]
     Trans_TF_looping_folder_path = os.path.abspath('./' + Trans_TF_looping_folder_name)
     Trans_TF_looping_file_path = os.path.abspath('./' + Trans_TF_looping_folder_name + '/' + Trans_TF_looping_file_name)
-    Valid_trans_coord_file_path = Trans_TF_looping_folder_path + '/' + TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0] + f'_{resolution}_resolution' + f'_{pad_size}_pad' + '.coord'
+    Valid_trans_coord_file_name = TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0] + f'_{resolution}_resolution' + f'_{str(pad_size)}_pad' + '.vcoord'
+    Valid_trans_coord_file_path = Trans_TF_looping_folder_path + '/' + Valid_trans_coord_file_name  # file name should look like: 1_1_10000_resolution_201_pad.coord
     try:
         os.makedirs(Trans_TF_looping_folder_path)  # create a trans_looping folder to contain the coordinate and result
         print(f"Folder for TF looping calculation created at {Trans_TF_looping_folder_name}")
@@ -118,7 +119,7 @@ def run(args):
 
     TF_1_df = pd.read_csv(TF_1_comp_bed_file_path, delimiter='\t', names=['chr_name', 'start', 'end', 'subcompartment'])
     TF_2_df = pd.read_csv(TF_2_comp_bed_file_path, delimiter='\t', names=['chr_name', 'start', 'end', 'subcompartment'])
-    '''generate a trans interaction list that is based on the subcompartment and two chip-seq signal file, the positions in this list
+    '''generate a trans interaction list that is based on the same-subcompartment(A1-A1, B1-B1, B2-B2) and two chip-seq signal file, the positions in this list
       do not consider the size fo the submatrix, and will be filtered in later step'''
     with open(Trans_TF_looping_file_path, 'w') as file1:
         csv_writer = csv.writer(file1, delimiter='\t')
@@ -136,8 +137,7 @@ def run(args):
                         for index_2, row_2 in chr_2_positions_df_2.iterrows():
                             csv_writer.writerow([row_1[0], row_1[1], row_1[2], row_2[0], row_2[1], row_2[2], comp])
                     intermediate_time_2 = time.perf_counter()
-                    print(
-                        f"interaction list for chromosome {chromosome_ls[i]} against {chromosome_ls[j]} between subcompartment {comp} in {round(intermediate_time_2 - intermediate_time_1, 5)} seconds")
+                    print(f"interaction list for chromosome {chromosome_ls[i]} against {chromosome_ls[j]} between subcompartment {comp} in {round(intermediate_time_2 - intermediate_time_1, 5)} seconds")
     end_time = time.perf_counter()
     print(f"trans interaction list for {TF_1_name} and {TF_2_name} with FDR value less than {10 ** (-q_value_threshold)}have been created in {round(end_time - start_time, 5)} seconds")
 
@@ -158,9 +158,7 @@ def run(args):
         temp_block_file_path_ls.append(splitting_coordinate_temp_folder_path + '/' + name)
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        processes = [
-            executor.submit(trans_coordinate_generator, cool_file, coordinate_block_file_path, pad_size, resolution) for
-            coordinate_block_file_path in temp_block_file_path_ls]
+        processes = [executor.submit(trans_coordinate_generator, cool_file, coordinate_block_file_path, pad_size, resolution, chromosome_ls) for coordinate_block_file_path in temp_block_file_path_ls]
         for process in concurrent.futures.as_completed(processes):
             print(f'for {process.result()[0]}, {process.result()[1]} trans coordinates were parsed, finding {process.result()[2]} valid coordinate that fit the trans pileup condition，taking {process.result()[3]} seconds')
     for input_block_file in temp_block_file_path_ls:
@@ -171,7 +169,7 @@ def run(args):
     for valid_coord_block_name in valid_trans_coordinate_block_ls:
         valid_trans_coordinate_block_path_ls.append(splitting_coordinate_temp_folder_path + '/' + valid_coord_block_name)
 
-    with open(Valid_trans_coord_file_path, 'a') as file1:
+    with open(Valid_trans_coord_file_path, 'a') as file1:  # concatenate the valid_trans_coordinate_block_file to a single file
         csv_writer = csv.writer(file1, delimiter='\t')
         for valid_trans_coordinate_block_path in valid_trans_coordinate_block_path_ls:
             with open(valid_trans_coordinate_block_path, 'r') as file2:
@@ -179,22 +177,18 @@ def run(args):
                 for line in csv_reader:
                     csv_writer.writerow(line)
     shutil.rmtree(splitting_coordinate_temp_folder_path)  # remove the temp folder for coordinate splitting and processing, including the blocked input and output file
-    subprocess.call(f'rm -rf {Trans_TF_looping_file_path}', shell=True)
+    subprocess.call(f'rm -rf {Trans_TF_looping_file_path}', shell=True) # remove the unfiltered Trans_TF_looping_file
     end_time = time.perf_counter()
     print(f'process finished, takes {round(end_time-start_time, 5)} seconds')
 
 
-def trans_coordinate_generator(cool_file, coordinate_file, pad, resolution):
+def trans_coordinate_generator(cool_file, coordinate_file, pad, resolution, chromosome_ls):
     process_time_start = time.perf_counter()
     coordinate_file_name = coordinate_file.split('/')[-1]
-    qualified_coordinate_file_file_path = coordinate_file + '_' + pad + '_' + resolution + '_' + 'qualified'
+    qualified_coordinate_file_file_path = coordinate_file + '_' + str(pad) + '_' + resolution + '_' + 'qualified'
     c1 = cooler.Cooler(cool_file)
     bins = c1.bins()[:]
     chr_bin_dic = {}
-    chromosome_ls = []
-    for i in range(1, 23):  # generate a list that contains all the chromosomes' names that the compartment file has
-        chromosome_ls.append('chr' + str(i))
-    chromosome_ls.append('chrX')
 
     for chromosome in chromosome_ls:
         chr_bin_dic[chromosome] = (bins.loc[bins['chrom'] == chromosome].index[0], bins.loc[bins['chrom'] == chromosome].index[-1])  # generate a tuple to store the chromosome's start and end bin number
@@ -255,7 +249,7 @@ def main():
     parser.add_argument("-b2", help="narrow bed file of the chip-seq data for TF2", dest="TF_bed_2", type=str, required=True)
     parser.add_argument("-cp", help="subcompartment file", dest="comp_file", type=str, required=True)
     parser.add_argument("-nl", help="TF number name list file", dest="tf_l", type=str, required=True)
-    parser.add_argument("-cs", help="chromosome size file", dest="tf_l", type=str, required=True)
+    parser.add_argument("-cs", help="chromosome size file", dest="chrsz", type=str, required=True)
     parser.add_argument("-qt", help="q value threshold for qualified ChIP peaks, suggestion: 1.3011 corresponding to FDR of 0.05", dest="qth", type=float, required=True)
     parser.add_argument("-pd", help="pad size(submatrix diemention (square matrix: pad*pad) in terms of pixels", dest="pad", type=int, required=True)
     parser.add_argument("-tn", help="number of cpu core used, process(thread) number", dest="t_number", type=int, required=True)
