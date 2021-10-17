@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2e0748a-972d-42f8-a07f-d4c13817901c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/transpileup_matrix_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/transpileup_random_trans_matrix_pileup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_compare_one_div_matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/cooler_compare_one_div_matrix.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HiC_matrix_manipulation/transpileup_coord_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/transpileup_coord_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HiC_matrix_manipulation/transpileup_matrix_pileup.py" beforeDir="false" afterPath="$PROJECT_DIR$/HiC_matrix_manipulation/transpileup_matrix_pileup.py" afterDir="false" />
     </list>
@@ -48,28 +51,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.loop_comp_sorting">
-    <configuration name="cooler_pixel_manipulation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="NGS_data_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cooler_pixel_manipulation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.multi_threading_test">
     <configuration name="cryomilling_sensitive_same_comp_contact" type="PythonConfigurationType" factoryName="Python">
       <module name="NGS_data_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,6 +115,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="multi_processing_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NGS_data_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HiC_matrix_manipulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HiC_matrix_manipulation/multi_processing_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="multi_threading_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NGS_data_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HiC_matrix_manipulation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HiC_matrix_manipulation/multi_threading_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="simplify_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NGS_data_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,34 +178,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="subcomp_to_individual_file" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="NGS_data_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Local_analysis_tool/subcomp_to_individual_file.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.multi_threading_test" />
+        <item itemvalue="Python.multi_processing_test" />
         <item itemvalue="Python.loop_comp_sorting" />
         <item itemvalue="Python.higlass_dif" />
         <item itemvalue="Python.simplify_data" />
-        <item itemvalue="Python.cooler_pixel_manipulation" />
-        <item itemvalue="Python.subcomp_to_individual_file" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631576021894</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="deleted some junk files and grouped the code">
+      <created>1631652580879</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1631652580879</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -326,20 +336,41 @@
       <screen x="36" y="25" width="1644" height="1025" />
     </state>
     <state x="322" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.25.2560.1415/4240.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631598969685" />
-    <state x="542" y="224" key="CommitChangelistDialog2" timestamp="1631576021728">
+    <state x="542" y="224" key="CommitChangelistDialog2" timestamp="1631652580717">
       <screen x="36" y="25" width="1644" height="1025" />
     </state>
     <state x="542" y="224" key="CommitChangelistDialog2/1680.25.1680.1025/36.25.1644.1025@36.25.1644.1025" timestamp="1629835509531" />
     <state x="2271" y="230" key="CommitChangelistDialog2/1680.25.1920.1055/36.25.1644.1025@1680.25.1920.1055" timestamp="1629337367098" />
     <state x="542" y="224" key="CommitChangelistDialog2/1680.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1630032082388" />
     <state x="2271" y="230" key="CommitChangelistDialog2/1680.25.1920.1055/39.25.1641.1025@1680.25.1920.1055" timestamp="1625185369820" />
-    <state x="542" y="224" key="CommitChangelistDialog2/1680.25.2560.1415/4240.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631576021728" />
-    <state x="576" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1630804884945">
+    <state x="542" y="224" key="CommitChangelistDialog2/1680.25.2560.1415/4240.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631652580717" />
+    <state width="811" height="196" key="GridCell.Tab.0.bottom" timestamp="1632261512790">
+      <screen x="36" y="25" width="1644" height="1025" />
+    </state>
+    <state width="811" height="196" key="GridCell.Tab.0.bottom/1680.25.3008.1667/4688.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631764354993" />
+    <state width="811" height="196" key="GridCell.Tab.0.bottom/36.25.1644.1025@36.25.1644.1025" timestamp="1632261512790" />
+    <state width="811" height="196" key="GridCell.Tab.0.center" timestamp="1632261512789">
+      <screen x="36" y="25" width="1644" height="1025" />
+    </state>
+    <state width="811" height="196" key="GridCell.Tab.0.center/1680.25.3008.1667/4688.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631764354992" />
+    <state width="811" height="196" key="GridCell.Tab.0.center/36.25.1644.1025@36.25.1644.1025" timestamp="1632261512789" />
+    <state width="811" height="196" key="GridCell.Tab.0.left" timestamp="1632261512788">
+      <screen x="36" y="25" width="1644" height="1025" />
+    </state>
+    <state width="811" height="196" key="GridCell.Tab.0.left/1680.25.3008.1667/4688.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631764354991" />
+    <state width="811" height="196" key="GridCell.Tab.0.left/36.25.1644.1025@36.25.1644.1025" timestamp="1632261512788" />
+    <state width="811" height="196" key="GridCell.Tab.0.right" timestamp="1632261512789">
+      <screen x="36" y="25" width="1644" height="1025" />
+    </state>
+    <state width="811" height="196" key="GridCell.Tab.0.right/1680.25.3008.1667/4688.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631764354992" />
+    <state width="811" height="196" key="GridCell.Tab.0.right/36.25.1644.1025@36.25.1644.1025" timestamp="1632261512789" />
+    <state x="576" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1631734936684">
       <screen x="36" y="25" width="1644" height="1025" />
     </state>
     <state x="2311" y="376" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/36.25.1644.1025@1680.25.1920.1055" timestamp="1630617006986" />
     <state x="576" y="366" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1630804884945" />
     <state x="578" y="366" key="com.intellij.ide.util.TipDialog/1680.25.1920.1055/39.25.1641.1025@39.25.1641.1025" timestamp="1625353863784" />
+    <state x="576" y="366" key="com.intellij.ide.util.TipDialog/1680.25.3008.1667/4688.25.1920.1055/36.25.1644.1025@36.25.1644.1025" timestamp="1631734936684" />
     <state x="576" y="366" key="com.intellij.ide.util.TipDialog/36.25.1644.1025@36.25.1644.1025" timestamp="1630029786611" />
     <state x="595" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1631652576440">
       <screen x="36" y="25" width="1644" height="1025" />

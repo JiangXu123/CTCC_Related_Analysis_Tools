@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 '''
-This program is used for comparing one division matrices of the same cell, trying to find out the principle of chromosome organization.
+This program is used for comparing ONE division matrices of the same cell, trying to find out the principle of chromosome organization.
 1. Calculating the division matrix pixel by pixel to find the pixel's contents in term of "average subcompartment length" which is equal to 
    the vertical pixel subcompartment length total plus horizontal pixel subcompartment length total, for each pixel, a table like beow
  will be generated and write into the file:
@@ -39,16 +39,25 @@ def run(args):
     cool_file_1 = args.cool_1
     cool_file_2 = args.cool_2
     compartment_file = args.comp_file
+    balancing_matrix_choice = args.mat_b
     division_pixel_comp_file = args.div_cis_pix
     aggr_comp_pixel_file = args.aggr_th_comp_ce
     comp_length_pixel_threshold_fig_file = args.fig
 
+    balancing_matrix = True
     pixel_length = int(cool_file_1.split("/")[-1])
     tb = tabix.open(compartment_file)
     c1 = cooler.Cooler(cool_file_1)
     c2 = cooler.Cooler(cool_file_2)
 
-    div_matrix_1_name = input("please input the name of the division matrix, which will be shown on the graph:")
+    if balancing_matrix_choice is None:
+        balancing_matrix = True   # by default the matrix is normalized
+    elif balancing_matrix_choice == 0:
+        balancing_matrix = False
+    elif balancing_matrix_choice == 1:
+        balancing_matrix = True
+
+    # div_matrix_1_name = input("please input the name of the division matrix, which will be shown on the graph:")
     start = time.perf_counter()
 
     # generate a chromosome list to contain all the chromosomes
@@ -91,8 +100,8 @@ def run(args):
             inter_time_start = time.perf_counter()
             chr_name = chromosome_ls[k]
             if not (chr_name in chrom_exclusion_ls):
-                cis_1 = c1.matrix(sparse=False, balance=True).fetch(chromosome_ls[k])  # cis_1, cis_2, and cis_3 are the cis matrix of the corresponding chromosome of three cool files, respectively.
-                cis_2 = c2.matrix(sparse=False, balance=True).fetch(chromosome_ls[k])
+                cis_1 = c1.matrix(sparse=False, balance=balancing_matrix).fetch(chromosome_ls[k])  # cis_1, cis_2, and cis_3 are the cis matrix of the corresponding chromosome of three cool files, respectively.
+                cis_2 = c2.matrix(sparse=False, balance=balancing_matrix).fetch(chromosome_ls[k])
                 cis_div_matrix_1 = np.divide(cis_1, cis_2)
                 chr_bins = bins.loc[bins['chrom'] == chr_name]
                 chr_bin_abs_start = chr_bins.index[0]  # to get the absolute start bin position of the chromosome
@@ -309,7 +318,7 @@ def run(args):
 
     fig.text(0, 0.7, "cis pixels", rotation=90, fontsize=30)
     fig.text(0, 0.2, "trans pixels", rotation=90, fontsize=30)
-    fig.text(0.05, 0.98, div_matrix_1_name, fontsize=30)
+    # fig.text(0.05, 0.98, div_matrix_1_name, fontsize=30)
     fig.tight_layout(pad=4)
     fig.savefig(comp_length_pixel_threshold_fig_file, format='png', dpi=300)
 
@@ -319,6 +328,7 @@ def main():
     parser.add_argument("-c1", help="cool file on the top for the first division matrix", dest="cool_1", type=str, required=True)
     parser.add_argument("-c2", help="cool file on the bottom for the first division matrix", dest="cool_2", type=str, required=True)
     parser.add_argument("-cp", help="tabix indexed subcompartment file", dest="comp_file", type=str, required=True)
+    parser.add_argument("-mb", help="matrix balancing option, 1 is True, 0 is False, default is 1(True)", dest="mat_b", type=str, required=False)
     parser.add_argument("-dp", help="output file containing graded division pixel value and pixel subcompartment length", dest="div_cis_pix", type=str, required=True)
     parser.add_argument("-ap", help="aggregated over-the-threshold pixel compartment enrichment", dest="aggr_th_comp_ce", type=str, required=True)
     parser.add_argument("-o", help="output lineplot file, should be ended with .png", dest="fig", type=str, required=True)

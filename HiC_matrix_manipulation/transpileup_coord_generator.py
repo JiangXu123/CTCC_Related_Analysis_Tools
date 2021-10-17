@@ -7,7 +7,6 @@ import csv
 import pandas as pd
 import time
 import subprocess
-import shutil
 import concurrent.futures
 import os
 
@@ -47,17 +46,15 @@ def run(args):
     TF_2_bed_comp_file_name = TF_bed_file_2.split('.')[0] + '_' + 'comp' + '.bed'
 
     Trans_TF_looping_file_name = TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0] + '.coord'
-    Trans_TF_looping_folder_name = TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0]
+    Trans_TF_looping_folder_name = TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0] + f'_{resolution}' + f'_{str(pad_size)}' # the folder_name looks like: 1_1_10000_201
     Trans_TF_looping_folder_path = os.path.abspath('./' + Trans_TF_looping_folder_name)
     Trans_TF_looping_file_path = os.path.abspath('./' + Trans_TF_looping_folder_name + '/' + Trans_TF_looping_file_name)
-    Valid_trans_coord_file_name = TF_bed_file_1.split('.')[0] + '_' + TF_bed_file_2.split('.')[0] + f'_{resolution}_resolution' + f'_{str(pad_size)}_pad' + '.vcoord'
-    Valid_trans_coord_file_path = Trans_TF_looping_folder_path + '/' + Valid_trans_coord_file_name  # file name should look like: 1_1_10000_resolution_201_pad.coord
     try:
         os.makedirs(Trans_TF_looping_folder_path)  # create a trans_looping folder to contain the coordinate and result
         print(f"Folder for TF looping calculation created at {Trans_TF_looping_folder_name}")
     except FileExistsError:
         print(f'Folder for TF looping calculation already exists at {Trans_TF_looping_folder_name}, will use for calculation')
-    splitting_coordinate_temp_folder_path = Trans_TF_looping_folder_path + '/temp'
+    splitting_coordinate_temp_folder_path = Trans_TF_looping_folder_path + '/split'
     os.mkdir(splitting_coordinate_temp_folder_path)
 
     TF_1_comp_bed_file_path = os.path.abspath('./' + Trans_TF_looping_folder_name + '/' + TF_1_bed_comp_file_name)
@@ -158,34 +155,34 @@ def run(args):
         temp_block_file_path_ls.append(splitting_coordinate_temp_folder_path + '/' + name)
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        processes = [executor.submit(trans_coordinate_generator, cool_file, coordinate_block_file_path, pad_size, resolution, chromosome_ls) for coordinate_block_file_path in temp_block_file_path_ls]
+        processes = [executor.submit(trans_coordinate_generator, cool_file, coordinate_block_file_path, pad_size, chromosome_ls) for coordinate_block_file_path in temp_block_file_path_ls]
         for process in concurrent.futures.as_completed(processes):
             print(f'for {process.result()[0]}, {process.result()[1]} trans coordinates were parsed, finding {process.result()[2]} valid coordinate that fit the trans pileup condition，taking {process.result()[3]} seconds')
     for input_block_file in temp_block_file_path_ls:
         subprocess.call(f'rm -rf {input_block_file}', shell=True)
 
-    valid_trans_coordinate_block_ls = os.listdir(splitting_coordinate_temp_folder_path)
-    valid_trans_coordinate_block_path_ls = []
-    for valid_coord_block_name in valid_trans_coordinate_block_ls:
-        valid_trans_coordinate_block_path_ls.append(splitting_coordinate_temp_folder_path + '/' + valid_coord_block_name)
+    # valid_trans_coordinate_block_ls = os.listdir(splitting_coordinate_temp_folder_path)
+    # valid_trans_coordinate_block_path_ls = []
+    # for valid_coord_block_name in valid_trans_coordinate_block_ls:
+    #     valid_trans_coordinate_block_path_ls.append(splitting_coordinate_temp_folder_path + '/' + valid_coord_block_name)
 
-    with open(Valid_trans_coord_file_path, 'a') as file1:  # concatenate the valid_trans_coordinate_block_file to a single file
-        csv_writer = csv.writer(file1, delimiter='\t')
-        for valid_trans_coordinate_block_path in valid_trans_coordinate_block_path_ls:
-            with open(valid_trans_coordinate_block_path, 'r') as file2:
-                csv_reader = csv.reader(file2, delimiter='\t')
-                for line in csv_reader:
-                    csv_writer.writerow(line)
-    shutil.rmtree(splitting_coordinate_temp_folder_path)  # remove the temp folder for coordinate splitting and processing, including the blocked input and output file
-    subprocess.call(f'rm -rf {Trans_TF_looping_file_path}', shell=True) # remove the unfiltered Trans_TF_looping_file
+    # with open(Valid_trans_coord_file_path, 'a') as file1:  # concatenate the valid_trans_coordinate_block_file to a single file
+    #     csv_writer = csv.writer(file1, delimiter='\t')
+    #     for valid_trans_coordinate_block_path in valid_trans_coordinate_block_path_ls:
+    #         with open(valid_trans_coordinate_block_path, 'r') as file2:
+    #             csv_reader = csv.reader(file2, delimiter='\t')
+    #             for line in csv_reader:
+    #                 csv_writer.writerow(line)
+    # shutil.rmtree(splitting_coordinate_temp_folder_path)  # remove the temp folder for coordinate splitting and processing, including the blocked input and output file
+    # subprocess.call(f'rm -rf {Trans_TF_looping_file_path}', shell=True) # remove the unfiltered Trans_TF_looping_file
     end_time = time.perf_counter()
     print(f'process finished, takes {round(end_time-start_time, 5)} seconds')
 
 
-def trans_coordinate_generator(cool_file, coordinate_file, pad, resolution, chromosome_ls):
+def trans_coordinate_generator(cool_file, coordinate_file, pad, chromosome_ls):
     process_time_start = time.perf_counter()
     coordinate_file_name = coordinate_file.split('/')[-1]
-    qualified_coordinate_file_file_path = coordinate_file + '_' + str(pad) + '_' + resolution + '_' + 'qualified'
+    qualified_coordinate_file_file_path = coordinate_file + '.' + 'qualified'
     c1 = cooler.Cooler(cool_file)
     bins = c1.bins()[:]
     chr_bin_dic = {}
